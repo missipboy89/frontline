@@ -38,5 +38,6 @@ export default {
   font-size: 120px;
   color: solid black;
   text-align: center;
+  margin: auto;
 }
 </style>
