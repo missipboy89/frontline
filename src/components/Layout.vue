@@ -10,6 +10,10 @@
         <div class="right menu">
           <a href="/" class="red item active">Login</a>
         </div>
+        <div class="ui icon input">
+          <input type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
       </div>
     </div>
     <h1 class="platoon">
