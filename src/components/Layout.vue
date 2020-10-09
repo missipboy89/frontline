@@ -1,42 +1,35 @@
 <template>
   <div>
 
-    <div class="ui inverted segment">
-      <div class="ui inverted secondary menu">
-        <a href="/" class="red item active">Home</a>
-        <a href="/" class="red item active">Mission</a>
-        <a href="/" class="red item active">Calendar</a>
-        <a href="/" class="red item active">Contact</a>
-        <div class="right menu">
-          <a href="/" class="red item active">Login</a>
-        </div>
-      </div>
-    </div>
+    <b-navbar toggleable="lg" type="dark" variant="dark" sticky=true>
+      <b-navbar-brand tag="h1" class="platoon" href="/">FRONTLINE SOC</b-navbar-brand>
 
-    <h1 class="platoon">
-        FRONTLINE SOC
-    </h1>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item href="/">Home</b-nav-item>
+          <b-nav-item href="/">Mission</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+
+    <img class="ui centered huge image" src="../assets/unnamed.jpg">
     <div class="ui horizontial divider"></div>
-    <div class="ui inverted segment">
-      <form action="https://www.biblegateway.com/quicksearch/" target="_blank">
-        <div class="ui fluid icon input">
-          <input @input="onInput" type="text" placeholder="Search..." name="quicksearch">
-          <button class="ui button">Search Bible Gateway</button>
-          <a href="https://www.biblegateway.com/" title="The Bible in multiple languages, versions, and formats" ></a>
-        </div>
-      </form>
+    <div>
+      <Parallax></Parallax>
     </div>
 
   </div>
 </template>
 
 <script>
+import Parallax from './Parallax'
+
 export default {
   name: 'Layout',
-  methods: {
-    onInput: function(event) {
-      this.$emit('termChange', event.target.value);
-    }
+  components: {
+    Parallax
   }
 }
 </script>
